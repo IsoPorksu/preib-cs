@@ -8,7 +8,7 @@ def import_file():
         contents of the coordinates.json file as a dictionary (which means we can look things up in it later)
     """
     try: # Try opening the file and loading its contents
-        with open('coordinates.txt', 'r') as file:
+        with open('coordinates.json', 'r') as file:
             return json.load(file) # The data is in JSON format (this is detailed more in the documentation), so load it into a dictionary with json.load()
     except Exception as e: # If that doesn't work, print a nice error message; "Exception as e" means that we can print e to get details about the error
         print(f"Oopsie! There was an error opening the JSON file: {e}")
